@@ -22,6 +22,7 @@ RSpec.describe Library do
 
       expect(library.authors.first).to be_a(Author)
       expect(library.books).to eq([jane_eyre, villette])
+      expect(library.books.include?('Clifford the Big Red Dog')).to eq(false)
     end
   end
 end
