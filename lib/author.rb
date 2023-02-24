@@ -12,4 +12,15 @@ class Author
     name << @first_name << @last_name
     name.join(' ')
   end
+
+  def write(title, publication_date)
+    new_book = Book.new({
+      author_first_name: @first_name, 
+      author_last_name: @last_name,
+      title: title, 
+      publication_date: publication_date
+      })
+    @books << new_book
+    new_book
+  end
 end
